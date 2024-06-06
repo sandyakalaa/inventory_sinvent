@@ -61,11 +61,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-toolbox"></i>
-                    <span>Data Masuk</span>
+                    <span>Data Induk</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data Masuk</h6>
+                        <h6 class="collapse-header">Data Induk</h6>
                         <a class="collapse-item" href="../../../kategori">Kategori</a>
                         <a class="collapse-item" href="../../../barang">Barang</a>
                     </div>

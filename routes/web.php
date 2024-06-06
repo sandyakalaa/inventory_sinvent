@@ -10,7 +10,7 @@ use \App\Http\Controllers\RegisterController;
 use \App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
 
 //route resource for products
@@ -35,3 +35,5 @@ Route::post('register', [RegisterController::class,'store']);
 
 //route category
 Route::resource('category', CategoryController::class);
+
+
