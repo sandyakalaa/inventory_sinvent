@@ -8,14 +8,16 @@ use \App\Http\Controllers\BarangKeluarController;
 use \App\Http\Controllers\LoginController;
 use \App\Http\Controllers\RegisterController;
 use \App\Http\Controllers\CategoryController;
+use \App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 //route resource for products
 Route::resource('products', \App\Http\Controllers\ProductController::class)->middleware('auth');
 
+Route::resource('dashboard', DashboardController::class)->middleware('auth');
 Route::resource('barang', BarangController::class)->middleware('auth');
 Route::resource('kategori', KategoriController::class)->middleware('auth');
 Route::resource('barangmasuk', BarangMasukController::class)->middleware('auth');
