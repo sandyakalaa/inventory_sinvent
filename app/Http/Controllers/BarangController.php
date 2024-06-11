@@ -32,6 +32,7 @@ class BarangController extends Controller
             ->orWhereHas('kategori', function ($query) use ($keyword) {
                 $query->where('deskripsi', 'LIKE', "%$keyword%");
             })
+            ->latest()
             ->paginate(10);
     
         return view('barang.index', compact('rsetBarang'));

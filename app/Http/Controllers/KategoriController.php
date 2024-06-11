@@ -67,7 +67,9 @@ class KategoriController extends Controller
         Kategori::create([
             'deskripsi'  => $request->deskripsi,
             'kategori'  => $request->kategori,
-        ]);
+        ])
+        ->latest()
+        ->paginate(10);;
 
         //redirect to index
         return redirect()->route('kategori.index')->with(['success' => 'Data Berhasil Disimpan!']);

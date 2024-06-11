@@ -19,9 +19,9 @@ return new class extends Migration
             $table->smallInteger('stok')->default(0);
             $table->tinyInteger('kategori_id')->unsigned();
             // $table->string('foto')->nullable();
-            $table->foreign('kategori_id')->references('id')->on('kategori')
-                  ->onUpdate('cascade')
-                  ->onDelete('restrict');
+            // $table->foreign('kategori_id')->references('id')->on('kategori')
+            //       ->onUpdate('cascade')
+            //       ->onDelete('restrict');
             $table->timestamps();
         });
     }

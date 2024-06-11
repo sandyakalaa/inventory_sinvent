@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
 		<div class="pull-left">
-		    <h2>EDIT BARANG</h2>
+		    <h2>EDIT BARANG MASUK</h2>
 		</div>
                 <div class="card">
                     <div class="card-body">
