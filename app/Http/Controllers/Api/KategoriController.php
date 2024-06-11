@@ -24,14 +24,18 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'deskripsi'   => 'required',
-            'kategori'    => 'required',
+        // return $request->all();
+
+        $request->validate( [
+            'deskripsi'   => 'required | unique:kategori',
+            'kategori'     => 'required | in:M,A,BHP,BTHP',
         ]);
-        
+
+
+        //create post
         $kategoribaru = Kategori::create([
             'deskripsi'  => $request->deskripsi,
-            'kategori'   => $request->kategori,
+            'kategori'  => $request->kategori,
         ]);
 
         $data = array("data"=>$kategoribaru);
