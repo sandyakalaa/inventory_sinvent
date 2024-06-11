@@ -48,7 +48,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12  text-center">
+            <div class="col-md-12  text-center pt-3">
                 <a href="{{ route('barang.index') }}" class="btn btn-md btn-primary mb-3">Back</a>
             </div>
         </div>

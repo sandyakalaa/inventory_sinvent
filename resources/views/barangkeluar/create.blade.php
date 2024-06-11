@@ -14,7 +14,8 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">TANGGAL KELUAR</label>
-                                <input type="date" class="form-control @error('tgl_keluar') is-invalid @enderror" name="tgl_keluar" value="{{ old('tgl_keluar') }}" placeholder="Masukan Tanggal Keluar Barang">
+                                <input type="date" class="form-control @error('tgl_keluar') is-invalid @enderror" 
+                                name="tgl_keluar" value="{{ old('tgl_keluar') }}" placeholder="Masukan Tanggal Keluar Barang">
                            
                                 <!-- error message -->
                                 @error('tgl_keluar')
@@ -27,7 +28,8 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">JUMLAH KELUAR</label>
-                                <input type="number" min="0" class="form-control @error('qty_keluar') is-invalid @enderror" name="qty_keluar" value="{{ old('qty_keluar') }}" placeholder="keluarkan Jumlah keluar Barang">
+                                <input type="number" min="0" class="form-control @error('qty_keluar') is-invalid @enderror" 
+                                name="qty_keluar" value="{{ old('qty_keluar') }}" placeholder="keluarkan Jumlah keluar Barang">
                            
                                 <!-- error message -->
                                 @error('qty_keluar')
@@ -64,4 +66,16 @@
             </div>
         </div>
     </div>
+    
+    <!-- Default Date Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateField = document.getElementById('tgl_keluar');
+            if (!dateField.value) {
+                const today = new Date().toISOString().split('T')[0];
+                dateField.value = today;
+            }
+        });
+    </script>
+        
 @endsection

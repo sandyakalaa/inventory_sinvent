@@ -65,4 +65,14 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateField = document.getElementById('tgl_masuk');
+            if (!dateField.value) {
+                const today = new Date().toISOString().split('T')[0];
+                dateField.value = today;
+            }
+        });
+    </script>
 @endsection
