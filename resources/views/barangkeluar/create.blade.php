@@ -14,7 +14,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">TANGGAL KELUAR</label>
-                                <input type="date" class="form-control @error('tgl_keluar') is-invalid @enderror" 
+                                <input type="date" id="tgl_keluar" class="form-control @error('tgl_keluar') is-invalid @enderror" 
                                 name="tgl_keluar" value="{{ old('tgl_keluar') }}" placeholder="Masukan Tanggal Keluar Barang">
                            
                                 <!-- error message -->
